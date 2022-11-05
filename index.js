@@ -17,7 +17,7 @@ let textbook= {name: "textbook", location: "main"};
 // pen - put in front pocket
 let pen = {name: "pen", location: "front"};
 // water bottle - put in side pocket
-let water = {name: "water bottle", location: "front"};
+let water = {name: "water bottle", location: "side"};
 // iPhone - put in front pocket
 let iPhone = {name: "iPone", location: "front"};
 // notebook - no location yet
@@ -44,7 +44,12 @@ for (const item of items){
 
 // TODO: Loop through the backpack and print each item in each compartment
 for (let compartmentKey in backpack) {
-  console.log(backpack[compartmentKey]);
+  let compartment = backpack[compartmentKey];
+  console.log(`\n${compartmentKey}`)
+  for(const item of compartment) {
+    console.log(item);
+  }
+  
 }
 
 // Take a look at the entire contents of the backpack so you see the nested data structures!
