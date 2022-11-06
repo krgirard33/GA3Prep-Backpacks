@@ -11,12 +11,22 @@ class Item {
 	// 3 - Add a location parameter and set a location property with it
 	// 4 - Give the location parameter a default value of null
 	// 5 - Throw an error if location is provided but it is invalid (hint: write a method to help with this)
-	constructor() {
-
+	constructor(name, location = null) {
+	  this.name = name;
+	  if (!name) {
+		throw Error("Name of item is required");
+	  }
+	  this.location = location;
+	  if (location && !this.isValidLocation()) {
+		throw Error("Valid location is required");
+	  }
 	}
-
-	// Code method for #5 here
-
-}
-
-module.exports = Item;
+  
+  // Code method for #5 here
+	isValidLocation() {
+	  let validLocations = ["main", "front", "side"];
+	  return validLocations.includes(this.location);
+	}
+  }
+  
+  module.exports = Item;
