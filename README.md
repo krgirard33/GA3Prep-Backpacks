@@ -43,7 +43,9 @@ Follow the TODOs in index.js to code each step along the way. When you are done,
   side: [ { name: 'water bottle', location: 'side' } ]
 }
 
-*** INSTRUCTIONS *** -- Part2
+************
+INSTRUCTIONS -- Part2
+************
 
 You will be defining three classes: Item, Compartment, and Backpack (in that order). 
 
